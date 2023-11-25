@@ -23,7 +23,7 @@ export class ListComponent implements OnInit {
 
       .subscribe((res) => {
         // observable
-        console.log(res);
+        // console.log(res);
         this.cards = [];
         this.searchCards(res);
       });
@@ -35,14 +35,14 @@ export class ListComponent implements OnInit {
   }
 
   onScroll() {
-    console.log('scrolled!!');
+    // console.log('scrolled!!');
     this.offset += 100;
     this.searchCards();
   }
 
   searchCards(cardName: string | null = null) {
     this.cardService.getCards(cardName, this.offset).subscribe((res) => {
-      console.log(res); // 12mil img
+      // console.log(res); // 12mil img
       this.cards = [...this.cards, ...res];
     });
   }

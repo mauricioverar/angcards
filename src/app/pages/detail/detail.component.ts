@@ -19,7 +19,7 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') || ''; // ruta del momento
-    this.card$ = this.cardService.getCard(this.id).pipe(tap(console.log));
+    this.card$ = this.cardService.getCard(this.id)//.pipe(tap(console.log));
     /* .subscribe((res) => {
       console.log(res); // al final desusbscribirnos de los suubscribes
     }); */
